@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge inline-heading">Leeds One
+        <span class="heading-secondary">
+          Going live: 12 December 2017
+        </span>
+      </h1>
+
+      <div class="nav-tabbed light-tabbed">
+        <ul>
+          <li class="current"><span class="small">Things you need to do</span></li>
+          <li><a href="to-do-list-completed"><span class="small">Completed</span></a></li>
+          <li><a href="to-do-list-archived"><span class="small">Archived</span></a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>{# /nav-tabbed #}
+
+      <h2 class="heading-large">Things you need to do now</h2>
+
+      <ul class="todo">
+        <li class="overdue">
+          <a href="/to-do">
+            <span class="heading">This is the title of a to-do</span>
+            <span class="small"><span class="overdue">Overdue by 12 days</span> · <span class="no-wrap">1&nbsp;of 4 tasks completed</span></span>
+          </a>
+        </li>
+        <li class="risk">
+          <a href="/plans/peckham/todo1-due-soon">
+            <span class="heading">This is the title of a to-do</span>
+            <span class="small"><span class="risk">Nearly due – complete by 12 September 2017</span> · <span class="no-wrap">3 of 4 tasks completed</span></span>
+          </a>
+        </li>
+        <li class="">
+          <a href="#">
+            <span class="heading">This is the title of a to-do</span>
+            <span class="small"><span class="">Complete by 18 October 2017</span> &middot; <span class="no-wrap">0&nbsp;of 3 tasks completed</span></span>
+          </a>
+        </li>
+      </ul>
+
+      <h2 class="heading-large">Things you can do later</h2>
+
+      <ul class="todo">
+        <li class="">
+          <a href="#">
+            <span class="heading">This is the title of a to-do</span>
+            <span class="small"><span class="">Ready to start from 7 November</span> &middot; <span class="no-wrap">0&nbsp;of 3 tasks completed</span></span>
+          </a>
+        </li>
+      </ul>
+
+    </div>{# /column-two-thirds #}
+  </div>{# /grid-row #}
+</main>
+
+{% endblock %}

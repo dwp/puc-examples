@@ -1,0 +1,242 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div id="global-breadcrumb">
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs" class="group">
+        <li><a href="/to-do-list">To-do list</a></li>
+        <li>
+          <!-- BREADCRUMB -->
+          Title of the to-do here
+          <!-- END OF BREADCRUMB -->
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!-- MAIN CONTENT -->
+
+      <h1 class="heading-xlarge">Title of the to-do here
+        <span class="heading-secondary">
+          Complete by 16 October
+        </span>
+      </h1>
+
+      <p class="lede">Make sure your service innovation lead has the training and system access they need to carry out their role.</p>
+
+      <p>You should work with the national co-ordination team for service innovation to do this.</p>
+
+      <!-- END OF MAIN CONTENT -->
+    
+      <h2 class="heading-medium" id="checklist">Task list</h2>
+
+      <div class="form-group">
+
+        <!-- TASKS -->
+
+        {# Task 1 #}
+        <div class="multiple-choice">
+          <input type="checkbox" name="task1" value="" id="task1">
+          <label for="task1" class="block-label">
+            Task 1 is here
+          </label>
+        </div>
+
+        {# Task 2 #}
+        <div class="multiple-choice">
+          <input type="checkbox" name="task2" value="" id="task2">
+          <label for="task2" class="block-label">
+            Task 2 is here
+          </label>
+        </div>
+
+        {# Task 3 #}
+        <div class="multiple-choice">
+          <input type="checkbox" name="task3" value="" id="task3">
+          <label for="task3" class="block-label">
+            Task 3 is here
+          </label>
+        </div>
+
+        <!-- END OF TASKS -->
+
+      </div>{# /form-group #}
+
+      <h2 class="heading-medium" id="comments">Comments</h2>
+
+      <div class="comment-group">
+
+        <div class="form-group">
+          <label class="form-label" for="issueMessage">Add comment
+            <span class="form-hint">
+            Don&rsquo;t include sensitive information like the personal details of claimants or&nbsp;staff.
+            </span>
+          </label>
+          <textarea class="form-control full-width" id="issueMessage" name="comment" cols="30" rows="3"></textarea>
+        </div>{# /form-group #}
+
+        <div class="form-group">
+          <div class="multiple-choice">
+            <input type="checkbox" name="help" value="Done" id="help">
+            <label for="help" class="block-label">
+              Blocker &ndash; something is stopping us completing this
+            </label>
+          </div>
+          <div class="multiple-choice">
+            <input type="checkbox" name="risk" value="Done" id="risk">
+            <label for="risk" class="block-label">Risk &ndash; tasks unlikely to be done before <span class="short-moment">19</span></label>
+          </div>
+        </div>{# /form-group #}
+
+      </div>{# /comment-group #}
+
+      <div class="form-group m-b-xl">
+        <a href="#" class="button">Save and continue</a>
+      </div>
+
+      <div id="comment-thread">
+
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – Today, 13:20 </span></h3>
+          <p>Completed this to-do by ticking the following task:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+          </ul>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – Yesterday, 16:20 </span></h3>
+          <p>Unticked the following task:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Choose a SPOC for outsourced providers and tell them.&rsquo;</li>
+          </ul>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – Yesterday, 09:10 </span></h3>
+          <p>Completed this to-do by ticking the following tasks:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+            <li>&lsquo;Task 2 is here&rsquo;</li>
+          </ul>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Clark Kent <span class="font-xsmall"> – Yesterday, 13:20 </span></h3>
+          <p>Ticked the following task:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+          </ul>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – 13 June 2017, 08:15 </span></h3>
+          <p>Ticked the following tasks:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+            <li>&lsquo;Task 2 is here&rsquo;</li>
+          </ul>
+          <p>&ldquo;We are currently making plans to change our office organisation under the Jobcentre Operating Model (JOM) to get us ready for Full Service.&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Lex Luther<span class="font-xsmall"> – 11 June 2017, 10:08 </span></h3>
+          <p>Changed the status to:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Blocked&rsquo;</li>
+          </ul>
+          <p>Unticked the following task:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 3 is here&rsquo;</li>
+          </ul>
+          <p>Ticked the following task:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+          </ul>
+          <p>&ldquo;We are currently making plans to change our office organisation under the Jobcentre Operating Model (JOM) to get us ready for Full Service.&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Clark Kent <span class="font-xsmall"> – 10 June, 16:11 </span></h3>
+          <p>Changed the status to:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Blocked&rsquo;</li>
+          </ul>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – 09 June, 07:25 </span></h3>
+          <p>Changed the status to:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Blocked&rsquo;</li>
+            <li>&lsquo;Risk of being overdue&rsquo;</li>
+          </ul>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – 08 June, 18:25 </span></h3>
+          <p>Changed the status to:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Not blocked&rsquo;</li>
+            <li>&lsquo;Not at risk of being overdue&rsquo;</li>
+          </ul>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">CDF Admin <span class="font-xsmall"> – 08 June, 11:25 </span></h3>
+          <p>Changed the instructions.</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – 07 June, 07:19 </span></h3>
+          <p>Unticked the following task:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+          </ul>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Louis Lane <span class="font-xsmall"> – 06 May, 06:15 </span></h3>
+          <p>&ldquo;We haven’t chosen our staff yet, so not sure we’re ready for this. Can we leave it for now?&rdquo;</p>
+        </div>
+        <div class="comment">
+          <h3 class="heading-small">Clark Kent<span class="font-xsmall"> – 03 May 2017, 10:08 </span></h3>
+          <p>Ticked the following tasks:</p>
+          <ul class="list list-bullet">
+            <li>&lsquo;Task 1 is here&rsquo;</li>
+            <li>&lsquo;Task 2 is here&rsquo;</li>
+          </ul>
+          <p>&ldquo;We are currently making plans to change our office organisation under the Jobcentre Operating Model (JOM) to get us ready for Full Service.&rdquo;</p>
+        </div>
+
+      </div>{# /comment-thread #}
+
+    </div>{# /column-two-thirds #}
+
+    <div class="column-one-third">
+      <aside class="govuk-related-items supporting-content" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Supporting content</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+
+            <!-- SUPPORTING CONTENT LINKS -->
+            <li><a href="#">Supporting content 1</a></li>
+            <li><a href="#">Supporting content 2</a></li>
+            <li><a href="#">Supporting content 3</a></li>
+            <!-- END OF SUPPORTING CONTENT LINKS -->
+
+          </ul>
+        </nav>
+      </aside>
+    </div>{# /column-one-third #}
+
+  </div>{# /grid-row #}
+
+</main>
+
+{% endblock %}

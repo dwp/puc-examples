@@ -1,0 +1,223 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+/* =============================================================================
+  TO-DOS
+=============================================================================== */
+
+ul.todo .heading {
+  font-weight: bold;
+}
+
+ul.todo li a,
+ul.todo li.dependencies {
+  margin: 10px 0;
+  padding: 20px 15px;
+  border-left: 5px solid $black;
+  border-bottom: 1px solid $border-colour;
+  border-top: 1px solid $white;
+  border-right: 1px solid $white;
+  background-color: $highlight-colour;
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+}
+
+ul.todo li a:hover {
+  background-color: $white;
+  border-bottom: 1px solid $border-colour;
+  border-top: 1px solid $border-colour;
+  border-right: 1px solid $border-colour;
+  span.heading {
+    text-decoration: underline;
+  }
+}
+
+ul.todo li a span.small,
+ul.todo li.dependencies span.small {
+  @include core-16;
+  color: $black;
+  display: table;
+}
+
+ul.todo li.overdue a {
+  border-left-color: $error-colour;
+  .overdue {
+    color: $error-colour; 
+  }
+}
+
+ul.todo li.risk a {
+  border-left-color: $orange;
+  .risk {
+    color: darken($orange, 20%);
+  }
+}
+
+h1.heading-xlarge .overdue {
+  color: $error-colour;
+}
+
+h1.heading-xlarge .risk {
+  color: darken($orange, 20%);
+}
+
+ul.todo li.dependencies {
+  background-color: transparent;
+  border-bottom: none;
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+
+// Tick list styling for comments
+
+.list-check li {
+  padding-left: 20px;
+  position: relative;
+  background-image: url('/public/images/icons/task-closed.svg');
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+}
+
+.list-uncheck li {
+  padding-left: 20px;
+  position: relative;
+  background-image: url('/public/images/icons/task-opened.svg');
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+}
+
+/* =============================================================================
+  COMMENT STYLING
+=============================================================================== */
+
+.comment {
+  border-top: 1px solid $border-colour;
+  clear: both;
+  h3 {
+    margin-top: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+.comment:last-child {
+  border-bottom: 1px solid $border-colour;
+}
+
+/* =============================================================================
+    TABS
+ =============================================================================== */
+
+.nav-tabbed {
+  border-bottom: 1px solid $border-colour;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav-tabbed ul {
+  display: block;
+  li {
+    background: $page-colour;
+    display: inline-block;
+    border: 1px solid $panel-colour;
+    background-color: $panel-colour;
+    color: $govuk-blue;
+    @include copy-16;
+    font-weight: bold;
+    padding: 0;
+    @include media(tablet) {
+      @include copy-19;
+      font-weight: bold;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 6px;
+      @include media(tablet) {
+        padding: 12px 15px 6px 15px;
+      }
+      &:hover {
+      color: $link-hover-colour;
+      }
+    }
+    i {
+      display: none;
+    }
+  }
+}
+
+.nav-tabbed ul li.current,
+.nav-tabbed.light-tabbed ul li.current {
+  color: $text-colour;
+  text-decoration: none;
+  border: 1px solid $border-colour;
+  background-color: $page-colour;
+  border-bottom: 1px solid $page-colour;
+  position: relative;
+  bottom: -1px;
+  padding: 10px 6px;
+  @include media(tablet) {
+      padding: 12px 15px 14px 15px;
+    }
+  span {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Lighter tabs
+
+.nav-tabbed.light-tabbed ul {
+  li {
+    background-color: #e8e8e8;
+    border: 1px solid #e8e8e8;
+  }
+}
+
+.nav-tabbed li small {
+  @include copy-16;
+  font-weight: bold;
+}
+
+.nav-tabbed li strong {
+  @include heading-48;
+  font-weight: bold;
+  line-height: 0;
+  margin-bottom: -15px;
+  padding-right: 100px;
+}
+
+
+
